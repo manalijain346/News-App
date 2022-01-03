@@ -67,7 +67,8 @@ body {
 
 .news-title{
     color: #484848;
-    font-size: 24px;
+    font-size: 20px;
+    margin: 10px 0px;
 
 }
 
@@ -75,7 +76,7 @@ body {
     text-decoration: underline;
 }
 
-p{
+.full-news{
     margin: 10px 0px;
 }
 
