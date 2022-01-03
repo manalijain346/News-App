@@ -97,11 +97,7 @@ p{
         margin: 15px;
         line-height: 1;
     }
-
-    .search-bar {
-        display: flex;
-    }
-
+    
     .btn {
         margin-left: 10px;
     }
