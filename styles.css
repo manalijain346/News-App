@@ -103,7 +103,6 @@ body {
 
     #news-block {
         flex-direction: column;
-        height: 400px;
         margin-left: unset;
     }
 
