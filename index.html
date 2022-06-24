@@ -8,45 +8,47 @@
     <meta name="description" content=" Basic News App">
     <title>News App</title>
     <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300;1,400&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;900&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
     <nav id="nav-bar">
-        <div class="logo">
-            <div>
-                <a href="#"><img src="https://www.jagranimages.com/images/jagran-2022-logo.svg" width="120" height="80"></a>
-            </div>
-            <div class="title">
-            <a href="#"><p>E-paper</p></a>
-            <a href="#"><p>Jagran Play</p></a>
-            </div>
-            
+        <h1 id="heading">News Bulletin</h1>
+        <div id="search-bar">
+                  <form class="d-flex">
+                    <input class="form-control me-1" type="search" placeholder="Search..." aria-label="Search">
+                    <button class="btn btn-outline-primary ms-1" type="submit">Search</button>
+                  </form>
+                </div>
         </div>
-        <ul class="headings">
-            <li><a href=# class="heading-links">fresh</a></li>
-            <li><a href=# class="heading-links">National</a></li>
-            <li><a href=# class="heading-links">MP Board Result</a></li>
-            <li><a href=# class="heading-links">successful head</a></li>
-            <li><a href=# class="heading-links">IPL 2022</a></li>
-            <li><a href=# class="heading-links">Special</a></li>
-            <li><a href=# class="heading-links">Politics</a></li>
-            <li><a href=# class="heading-links">World</a></li>
-            <li><a href=# class="heading-links">Entertainment</a></li>
-            <li><a href=# class="heading-links">Business</a></li>
-            <li><a href=# class="heading-links">Lifestyle</a></li>
-            <li><a href=# class="heading-links">Cricket</a></li>
-            <li><a href=# class="heading-links">auto</a></li>
-            <li><a href=# class="heading-links">tech knowledge</a></li>
-            <li><a href=# class="heading-links">common issues</a></li>
-        </ul>
     </nav>
-    <div id="news-container">
-    </div>
+    <main id="news-container">
+        <div id="news-block">
+            <div id="image-container">
+                <img class="news-image" src="https://images.hindustantimes.com/img/2022/06/24/1600x900/Modi_1656054918912_1656054932150.png" alt="News">
+            </div>
+            <div id="news">
+                <li>
+                    <a class="news-title" href="https://www.hindustantimes.com/india-news/prez-polls-droupadi-murmu-leaves-for-parliament-will-file-nomination-shortly-101656045388931.html">Droupadi Murmu files presidential polls nomination in PM Modi's presence</a>
+                </li>
+                <li  class="news-description">
+                    Presidential polls: Droupadi Murmu, who belongs to the Santhal tribe from Odisha, has been pitted against opposition's candidate Yashwant Sinha. | Latest News India
+                </li>
+                <li><span class="published-label">Published:</span>
+                <span class="published-value"> Fri Jun 24 2022</span></li>
+            </div>
+        </div>
+    </main>
     <script src="index.js"></script>
+
 </body>
 
 </html>
