@@ -22,7 +22,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 #news-block{
     box-sizing: border-box;
     width: 930px;
-    margin: 10px auto;
+    margin: 20px auto;
     box-shadow: 1px 1px 2px 0px #888;
     display: flex;
     background-color: white;
@@ -30,6 +30,11 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     border-radius: 4px;
     padding: 12px;
 }
+
+#news-block:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 #news{
     margin-left: 10px;
     color: black;
@@ -45,7 +50,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .news-title{
     text-decoration: none;
     color: #484848;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
 }
 

@@ -1,36 +1,43 @@
-var el = document.getElementById("news-container");
+var el=document.getElementById("news-container");
 
-function getNews() {
-    fetch('https://gnews.io/api/v4/top-headlines?&token=ea89d7bb706e9905ec5f5f3808ec4c50&lang=en')
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-            var content = "";
-            var newsList = data.articles;
-            for (let index = 0; index < newsList.length; index++) {
-                const element = newsList[index];
-                content = content + `<div class="news-block" id="news-block">
-            <div class="image-container" id="image">
-                <img src=${element.image} class="image" height="100px" width="100px" alt="news">
-            </div>
-            <div class="news-description" id="news-description">
-            <a class="news-title" href="${element.url}"> ${element.title}</a>
-                <p class="full-news">${element.description}</p>
-                <span class="published">Published: </span>
-                <span class="published-on">${formatDate(element.publishedAt)}</span>
-            </div>
-        </div>`
-            }
-            el.innerHTML = content;
+const xhr= new XMLHttpRequest();
+
+xhr.open('GET','https://newsapi.org/v2/everything?q=bitcoin&apiKey=b3b458aef33944a993200b385116c4a6',true)
+
+xhr.onload=function(){
+    if(this.status===200){
+        let json=JSON.parse(this.responseText)
+        let articles=json.articles;
+        console.log(articles);
+        let newsHtml="";
+        articles.forEach(function(element){
+            let news= 
+            `<div id="news-block">
+                <div id="image-container">
+                    <img class="news-image" src=${element["urlToImage"]}>
+                </div>
+                <div id="news">
+                    <li>
+                        <a class="news-title" href=${element["url"]}>${element["title"]}</a>
+                    </li>
+                    <li class="news-description">
+                        ${element["content"]}
+                    </li>
+                    <li>
+                        <span class="published-label">Published:</span>
+                        <span class="published-value"> ${formatDate(element["publishedAt"])}</span></li>
+                </div>
+            </div>`
+            newsHtml+=news;
         });
+        el.innerHTML=newsHtml;
+    }
+    else{
+        console.log("some error occurred")
+    }
 }
+xhr.send()
 
-getNews();
-
-function formatDate(value) {
-    var date = new Date(value);
-    var n = date.toDateString();
-    return n;
-};
+function formatDate(date) {
+    return new Date(date).toDateString();
+} 
